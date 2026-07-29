@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colegio Nuestra Señora de Fátima — Propuesta de Transformación Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <button class="nav-mark" onclick="showView('home')"><img class="nav-logo logo-img" alt="Escudo del colegio"> Ntra. Sra. de Fátima</button>
+  <div class="nav-crumb"><span id="crumb-text">Menú de propuestas</span></div>
+</nav>
+
+<main>
+
+  <!-- ============ HOME / MENU ============ -->
+  <div class="view active" id="view-home">
+    <div class="home-hero" id="home-hero">
+      <div class="rays" aria-hidden="true"></div>
+      <div class="home-hero-inner">
+        <img class="home-crest logo-img" alt="Escudo del colegio">
+        <span class="eyebrow" style="color:var(--gold-light)">Propuesta institucional 2026 – 2027</span>
+        <h1>Avancemos propuesta por propuesta</h1>
+        <p>Este plan estratégico articula los frentes de comunicación, infraestructura tecnológica y gestión académica. 
+          Cada módulo presenta un diagnóstico situacional y una hoja de ruta orientada al fortalecimiento institucional y al éxito de la campaña de Admisión 2027.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num" data-count="12">0</div><div class="lb">frentes digitales mapeados</div></div>
+          <div class="hero-stat"><div class="num" data-count="4">0</div><div class="lb">diagnósticos con datos reales</div></div>
+          <div class="hero-stat"><div class="num" data-count="61" data-suffix="+">0</div><div class="lb">años de historia fatimeña</div></div>
+          <div class="hero-stat"><div class="num" data-count="2027">0</div><div class="lb">meta de admisión</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-intro">
+        <div class="progress-badge">
+          <span class="ring">
+            <svg width="26" height="26" viewBox="0 0 26 26">
+              <circle class="bg" cx="13" cy="13" r="11"/>
+              <circle class="fg" cx="13" cy="13" r="11" id="progress-ring" stroke-dasharray="69.1" stroke-dashoffset="69.1"/>
+            </svg>
+          </span>
+          <span><strong id="progress-count">4</strong> de <span id="progress-total">12</span> propuestas en revisión activa</span>
+        </div>
+        <span class="eyebrow">Elige por dónde seguir</span>
+        <p>Empezamos por Facebook, que ya tiene una página activa que podemos diagnosticar antes de definir el plan de las demás redes.</p>
+      </div>
+
+      <div class="menu-grid">
+
+        <button class="menu-card" onclick="showView('facebook')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#3B5998" data-icon="facebook"></div>
+            <span class="status active">En revisión</span>
+          </div>
+          <h3>Facebook</h3>
+          <p class="desc">Diagnóstico de la página actual del colegio y plan para ordenarla rumbo a admisión 2027.</p>
+          <span class="go">Revisar ahora →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('tiktok')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#101010" data-icon="tiktok"></div>
+            <span class="status active">En revisión</span>
+          </div>
+          <h3>TikTok</h3>
+          <p class="desc">Diagnóstico de la cuenta @c.e.p.nsfatima y propuestas para ordenar su contenido.</p>
+          <span class="go">Revisar ahora →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('instagram')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF)" data-icon="instagram"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>Instagram</h3>
+          <p class="desc">Identidad visual del colegio: historias, carruseles y campaña de matrícula.</p>
+          <span class="go"> →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('google')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#3B65A6" data-icon="google"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>Colegio de Referencia Google</h3>
+          <p class="desc">Los cinco pasos para postular al reconocimiento oficial de Google.</p>
+          <span class="go">Ver "Fase de Planificación" →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('chrome')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#4A4A4A" data-icon="chrome"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>ChromeOS Flex</h3>
+          <p class="desc">Modernizar las PCs del colegio sin comprar equipos nuevos.</p>
+          <span class="go">Ver "Fase de Planificación" →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('roadmap')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:var(--gold)" data-icon="roadmap"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>Hoja de ruta 2027</h3>
+          <p class="desc">Línea de tiempo que junta los tres frentes hasta la campaña de admisión.</p>
+          <span class="go">Ver "Fase de Planificación" →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('web')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#2E6F6F" data-icon="web"></div>
+            <span class="status active">En revisión</span>
+          </div>
+          <h3>Página web</h3>
+          <p class="desc">Diagnóstico de nsfatima.org: contenido desactualizado y sin ruta clara a admisión.</p>
+          <span class="go">Revisar ahora →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('docentes')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#6E4A18" data-icon="docentes"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>Capacitación docente</h3>
+          <p class="desc">Formar al profesorado en herramientas digitales, base de todo lo demás.</p>
+          <span class="go">Ver "Fase de Planificación" →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('admin')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#4C6B34" data-icon="admin"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>Áreas administrativas</h3>
+          <p class="desc">Digitalizar matrícula, pagos y gestión documentaria de secretaría y tesorería.</p>
+          <span class="go">Ver "Fase de Planificación" →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('youtube')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#B31217" data-icon="youtube"></div>
+            <span class="status active">En revisión</span>
+          </div>
+          <h3>YouTube institucional</h3>
+          <p class="desc">Encontramos Oportunidad de Reactivación de Contenido Audiovisual: un video del 50° aniversario, de 2008.</p>
+          <span class="go">Revisar ahora →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('gbp')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#174EA6" data-icon="gbp"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>Perfil de Google (Maps)</h3>
+          <p class="desc">Lo primero que ve una familia al buscar "colegio en Belén, Iquitos".</p>
+          <span class="go">Ver "Fase de Planificación" →</span>
+        </button>
+
+        <button class="menu-card" onclick="showView('embajadores')">
+          <div class="top-row">
+            <div class="badge-icon" style="background:#8A4B78" data-icon="ambassadors"></div>
+            <span class="status pending">"Fase de Planificación"</span>
+          </div>
+          <h3>Embajadores y referidos</h3>
+          <p class="desc">Que las familias fatimeñas de hoy traigan a las de mañana.</p>
+          <span class="go">Ver "Fase de Planificación" →</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FACEBOOK ============ -->
+  <div class="view" id="view-facebook">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#3B5998" data-icon="facebook"></div>
+        <div>
+          <span class="eyebrow">Red social 1 de 3</span>
+          <h2>Facebook — diagnóstico y estrategia</h2>
+        </div>
+      </div>
+      <p class="subtitle">Línea Base: la página <strong>facebook.com/colegiofatimaiquitos</strong>, que ya existe y tiene actividad. Antes de sumar contenido nuevo, ordenamos lo que hay.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="subhead">
+        <span class="eyebrow">"Auditoría y Diagnóstico de Presencia Digital"</span>
+        <h3>Auditoría Digital Pública de la página</h3>
+      </div>
+      <table class="diag-table">
+        <tr><th>Dato</th><th>Lo encontrado</th></tr>
+        <tr><td class="metric">Enlace proporcionado</td><td class="value">facebook.com/colegiofatimaiquitos</td></tr>
+        <tr><td class="metric">Nombre público indexado</td><td class="value">Aparece también registrada como "Colegio Parroquial Nuestra Señora De Fatima – Iquitos" en los resultados de búsqueda, lo que sugiere que el nombre visible de la página podría no coincidir exactamente con el del colegio.</td></tr>
+        <tr><td class="metric">Seguidores</td><td class="value placeholder-val">— "Fase de Planificación", no visible sin acceder a la página —</td></tr>
+        <tr><td class="metric">Publicaciones últimos 30 días</td><td class="value placeholder-val">— "Fase de Planificación" —</td></tr>
+        <tr><td class="metric">Formato predominante</td><td class="value placeholder-val">— "Fase de Planificación" —</td></tr>
+        <tr><td class="metric">Alcance / interacción promedio</td><td class="value placeholder-val">— "Fase de Planificación" —</td></tr>
+      </table>
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Qué reviso una vez tenga los datos</h4>
+          <ul>
+            <li>Si el nombre, foto de perfil y portada están alineados a la identidad del colegio (mismo escudo, mismos colores)</li>
+            <li>Consistencia y frecuencia real de publicación en las últimas semanas</li>
+            <li>Qué tipo de contenido genera más interacción de padres de familia</li>
+            <li>Si existe un botón o sección clara de "Admisión 2027"</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Por qué importa antes de seguir</h4>
+          <ul>
+            <li>Facebook es la red donde los padres validan al colegio antes de matricular</li>
+            <li>Una página con nombre o datos desactualizados resta confianza institucional</li>
+            <li>Corregir la base evita duplicar esfuerzo cuando lancemos TikTok e Instagram</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Plan de orden para la página</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step">
+          <div class="n">01</div>
+          <div><h5>Auditoría de identidad</h5><p>Verificar nombre de la página, foto de perfil con el escudo actual y portada con mensaje de admisión 2027.</p></div>
+        </div>
+        <div class="plan-step">
+          <div class="n">02</div>
+          <div><h5>Revisión de administradores</h5><p>Confirmar quién tiene acceso al panel de administración y centralizar la gestión en el equipo responsable.</p></div>
+        </div>
+        <div class="plan-step">
+          <div class="n">03</div>
+          <div><h5>Calendario de publicación</h5><p>Definir 3 publicaciones por semana: comunicados, testimonios y cobertura de actividades institucionales.</p></div>
+        </div>
+        <div class="plan-step">
+          <div class="n">04</div>
+          <div><h5>Sección de admisión visible</h5><p>Botón "Más información" enlazado al proceso de admisión 2027, siempre visible en la portada.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ TIKTOK ============ -->
+  <div class="view" id="view-tiktok">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#101010" data-icon="tiktok"></div>
+        <div><span class="eyebrow">Red social 2 de 3</span><h2>TikTok — diagnóstico y estrategia</h2></div>
+      </div>
+      <p class="subtitle">Línea Base: la cuenta <strong>@c.e.p.nsfatima</strong>, que ya existe y publica contenido institucional.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="subhead">
+        <span class="eyebrow">"Auditoría y Diagnóstico de Presencia Digital"</span>
+        <h3>Auditoría Digital Pública de la cuenta</h3>
+      </div>
+      <table class="diag-table">
+        <tr><th>Dato</th><th>Lo encontrado</th></tr>
+        <tr><td class="metric">Cuenta proporcionada</td><td class="value">@c.e.p.nsfatima</td></tr>
+        <tr><td class="metric">Nombre visible</td><td class="value">ColegioNuestraSeñoradeFatima</td></tr>
+        <tr><td class="metric">Contenido confirmado</td><td class="value">Un video de bienvenida al año escolar 2025: formación, izamiento del pabellón, presentación de docentes y show de bienvenida — con etiquetas #BienvenidasFatimeñas #AñoEscolar2025.</td></tr>
+        <tr><td class="metric">Seguidores</td><td class="value placeholder-val">— no confiable: la búsqueda mezcló cifras de otras cuentas "Fátima" (Cusco, El Salvador) bajo el mismo texto. "Fase de Planificación" de verificar directamente en la app —</td></tr>
+        <tr><td class="metric">Frecuencia de publicación</td><td class="value placeholder-val">— "Fase de Planificación" —</td></tr>
+      </table>
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Algo a verificar de una vez</h4>
+          <ul>
+            <li>El nombre visible dice "ColegioNuestraSeñoradeFatima" sin distinguir Iquitos — fácil de confundir con cuentas de otros colegios Fátima en el buscador</li>
+            <li>Solo confirmamos un video institucional (bienvenida 2025); no sabemos si hay actividad reciente y constante</li>
+            <li>Vale la pena revisar si el enlace en biografía apunta a algo (web, WhatsApp, admisión)</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Por qué importa antes de seguir</h4>
+          <ul>
+            <li>TikTok es el canal de mayor alcance orgánico hacia familias que no conocen el colegio</li>
+            <li>Un nombre de cuenta ambiguo diluye la búsqueda entre colegios "Fátima" de otras ciudades</li>
+            <li>Sin cadencia constante, el algoritmo no vuelve a mostrar la cuenta a nuevas audiencias</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Plan para ordenar y activar la cuenta</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step">
+          <div class="n">01</div>
+          <div><h5>Reforzar el nombre visible</h5><p>Ajustar a algo como "Colegio Fátima Iquitos" para que aparezca claro en las búsquedas y no se confunda con otras sedes.</p></div>
+        </div>
+        <div class="plan-step">
+          <div class="n">02</div>
+          <div><h5>Enlace en biografía</h5><p>Agregar enlace directo a la información de admisión 2027 o a WhatsApp de contacto.</p></div>
+        </div>
+        <div class="plan-step">
+          <div class="n">03</div>
+          <div><h5>Pilares de contenido</h5><p>"Un día en el Fátima", retos y momentos espontáneos del aula, micro-entrevistas a docentes y alumnos.</p></div>
+        </div>
+        <div class="plan-step">
+          <div class="n">04</div>
+          <div><h5>Cadencia de publicación</h5><p>4 videos por semana, entre 15 y 45 segundos, coordinados con los Reels de Instagram para no duplicar esfuerzo de grabación.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <div class="view" id="view-instagram">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF)" data-icon="instagram"></div>
+        <div><span class="eyebrow">Red social 3 de 3 · "Fase de Planificación"</span><h2>Instagram — la identidad visual</h2></div>
+      </div>
+      <p class="subtitle">Construye la marca del colegio con estética cuidada: historias, momentos y anuncios de admisión.</p>
+    </div>
+    <div class="view-body">
+      <div class="social-mock" style="margin-bottom:36px;">
+        <div class="row"><div class="av"></div><div><div class="name">Colegio Fátima</div><div class="handle">Historia destacada</div></div></div>
+        <div class="cap">Inscripciones abiertas · Admisión 2027</div>
+        <div class="bar"></div>
+      </div>
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Pilares de contenido</h4>
+          <ul>
+            <li>Historias destacadas: Admisión, Pastoral, Deportes</li>
+            <li>Carruseles de proyectos por área académica</li>
+            <li>Anuncios de campaña de matrícula</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Meta de cadencia</h4>
+          <ul>
+            <li>5 publicaciones y reels por semana</li>
+            <li>Paleta visual alineada al escudo: rojo y dorado</li>
+            <li>Bio con enlace directo a admisión 2027</li>
+          </ul>
+        </div>
+      </div>
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Cómo activarla</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Auditoría de perfil</h5><p>Revisar foto, biografía y enlace de admisión, igual que en Facebook y TikTok.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Historias destacadas fijas</h5><p>Crear las portadas "Admisión", "Pastoral" y "Deportes" con el estilo visual del escudo.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Reels reutilizando TikTok</h5><p>Publicar el mismo video de TikTok como Reel, sin duplicar el trabajo de grabación.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ GOOGLE REFERENCE ============ -->
+  <div class="view" id="view-google">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#3B65A6" data-icon="google"></div>
+        <div><span class="eyebrow">Reconocimiento institucional · "Fase de Planificación"</span><h2>Camino a Colegio de Referencia Google</h2></div>
+      </div>
+      <p class="subtitle">El programa Google Reference School reconoce instituciones que integran de forma real las herramientas de Google Workspace for Education.</p>
+    </div>
+    <div class="view-body">
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Los cinco pasos, en orden</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Diagnóstico tecnológico del colegio</h5><p>Auditoría del estado actual de equipos, conectividad y uso de Google Workspace for Education.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Capacitación docente</h5><p>Formación práctica en Classroom, Drive, Meet y Documentos aplicados a la planificación de clases.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Certificación Google Educator</h5><p>Acompañamiento para que un grupo base de docentes obtenga la certificación Nivel 1 y, luego, Nivel 2.</p></div></div>
+        <div class="plan-step"><div class="n">04</div><div><h5>Integración real en el aula</h5><p>Uso sostenido de las herramientas en el trabajo diario, no solo en capacitaciones puntuales.</p></div></div>
+        <div class="plan-step"><div class="n">05</div><div><h5>Postulación oficial</h5><p>Presentación del expediente institucional ante Google para la evaluación como Reference School.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CHROMEOS FLEX ============ -->
+  <div class="view" id="view-chrome">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#4A4A4A" data-icon="chrome"></div>
+        <div><span class="eyebrow">Infraestructura · "Fase de Planificación"</span><h2>ChromeOS Flex en los equipos del colegio</h2></div>
+      </div>
+      <p class="subtitle">Antes de sumar herramientas nuevas, las computadoras actuales necesitan un sistema que las sostenga.</p>
+    </div>
+    <div class="view-body">
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Qué instalar y por qué</h3>
+      </div>
+      <div class="flex-panel">
+        <div class="flex-left">
+          <h4>¿Por qué ChromeOS Flex?</h4>
+          <p>Optimización de Equipamiento Existente: 
+            Reutilización estratégica de las computadoras de cómputo mediante el sistema operativo ChromeOS Flex, extendiendo su ciclo de vida útil, mejorando la velocidad de inicio y garantizando la administración centralizada sin costos en licencias de software.</p>
+        </div>
+        <div class="flex-right">
+          <div class="benefit"><span class="mk2">→</span><div><h5>Aprovecha el equipo existente</h5><p>Extiende la vida útil de las PCs de laboratorio y biblioteca.</p></div></div>
+          <div class="benefit"><span class="mk2">→</span><div><h5>Administración centralizada</h5><p>Gestión de todos los equipos desde la consola de Google.</p></div></div>
+          <div class="benefit"><span class="mk2">→</span><div><h5>Arranque casi inmediato</h5><p>Ideal para el ritmo de una hora de clase.</p></div></div>
+          <div class="benefit"><span class="mk2">→</span><div><h5>Seguridad automática</h5><p>Actualizaciones y protección sin mantenimiento manual.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ROADMAP ============ -->
+  <div class="view" id="view-roadmap">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:var(--gold)" data-icon="roadmap"></div>
+        <div><span class="eyebrow">Hoja de ruta · "Fase de Planificación"</span><h2>Del diagnóstico a la admisión 2027</h2></div>
+      </div>
+      <p class="subtitle">Los tres frentes avanzan en paralelo, convergiendo en la campaña de matrícula.</p>
+    </div>
+    <div class="view-body">
+      <div class="roadmap">
+        <div class="rm-item"><span class="when">Trimestre 1</span><h4>Cimientos</h4><p>Diagnóstico de Facebook, apertura de TikTok y piloto de ChromeOS Flex.</p></div>
+        <div class="rm-item"><span class="when">Trimestre 2</span><h4>Ritmo</h4><p>Publicación constante en las tres redes y capacitación docente en Google Workspace.</p></div>
+        <div class="rm-item"><span class="when">Trimestre 3</span><h4>Prestigio</h4><p>Certificaciones Google Educator e integración visible en el aula.</p></div>
+        <div class="rm-item"><span class="when">Trimestre 4</span><h4>Postulación</h4><p>Envío del expediente a Google y lanzamiento de campaña digital.</p></div>
+        <div class="rm-item"><span class="when">Marzo 2027</span><h4>Admisión</h4><p>Familias que descubrieron al Fátima en redes inscriben con confianza.</p></div>
+      </div>
+
+      <div class="subhead" style="margin-top:36px;">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Próximos pasos inmediatos</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Cerrar los diagnósticos base</h5><p>Terminar Facebook, TikTok y página web antes de abrir Instagram, para no repetir el mismo trabajo de orden dos veces.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Definir responsables por frente</h5><p>Una persona a cargo de redes, otra de la parte técnica (ChromeOS, Google Workspace) y otra de lo administrativo.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Revisión mensual del avance</h5><p>Punto de control breve cada mes para ajustar el ritmo de los tres frentes según lo que muestre cada uno.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PÁGINA WEB ============ -->
+  <div class="view" id="view-web">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#2E6F6F" data-icon="web"></div>
+        <div><span class="eyebrow">Presencia digital</span><h2>Página web — diagnóstico y estrategia</h2></div>
+      </div>
+      <p class="subtitle">El colegio ya tiene un sitio propio en <strong>www.nsfatima.org</strong>. A diferencia de Facebook y TikTok, sí pude leerlo directamente.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="subtabs">
+        <button class="subtab active" onclick="showWebTab('diag')">Diagnóstico</button>
+        <button class="subtab" onclick="showWebTab('moderna')">Propuesta de diseño moderno</button>
+      </div>
+
+      <div class="subtab-panel active" id="web-tab-diag">
+
+      <div class="subhead">
+        <span class="eyebrow">Lo que encontramos</span>
+        <h3>Estado actual del sitio</h3>
+      </div>
+      <table class="diag-table">
+        <tr><th>Dato</th><th>Lo encontrado</th></tr>
+        <tr><td class="metric">Dominio</td><td class="value">www.nsfatima.org</td></tr>
+        <tr><td class="metric">Contenido institucional</td><td class="value">Historia, misión, visión y pastoral están completos y bien redactados — es una buena base de identidad.</td></tr>
+        <tr><td class="metric">Vigencia del contenido</td><td class="value">La misión declarada dice "Al 2022 somos…" y el pie de página marca "Belén 2020"; el costo del servicio educativo mostrado también corresponde a 2020.</td></tr>
+        <tr><td class="metric">Datos de contacto</td><td class="value">Jr. BAP Próspero N° 1258, Belén · Tel 065-263954 · informes@nsfatima.org</td></tr>
+        <tr><td class="metric">Plataforma virtual</td><td class="value">Ya existe una intranet académica en nsfatima.sieweb.com.pe, separada del sitio principal.</td></tr>
+        <tr><td class="metric">Ruta a admisión</td><td class="value placeholder-val">No se identificó una sección de "Admisión 2027" ni un formulario claro de preinscripción en la página de inicio.</td></tr>
+        <tr><td class="metric">Presencia fragmentada</td><td class="value">Encontramos un tercer sitio: un Google Sites (sites.google.com/view/nsfatima) creado en 2017 por estudiantes, con un video institucional de 2008. El colegio tiene así tres propiedades web distintas y ninguna centraliza todo.</td></tr>
+      </table>
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Lo que ya funciona</h4>
+          <ul>
+            <li>Identidad institucional sólida: misión, visión y pastoral bien desarrolladas</li>
+            <li>Datos de contacto y ubicación completos</li>
+            <li>Ya existe una plataforma virtual separada para gestión académica</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Oportunidades de Optimización Estratégica 2027</h4>
+          <ul>
+            <li>Actualizar fechas, costos y el año de la misión institucional</li>
+            <li>Diseño no confirmado como responsive (adaptado a celular)</li>
+            <li>Sin enlaces visibles hacia Facebook, TikTok o Instagram</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Plan para poner al día el sitio</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">00</div><div><h5>Unificar en un solo sitio</h5><p>Definir nsfatima.org como el único sitio oficial y redirigir o archivar el Google Sites de 2017 para no confundir a las familias.</p></div></div>
+        <div class="plan-step"><div class="n">01</div><div><h5>Actualizar contenido vigente</h5><p>Corregir año de la misión institucional, costos y calendario para reflejar el ciclo actual.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Sección de Admisión 2027</h5><p>Página dedicada con requisitos, fechas y un formulario de preinscripción visible desde el inicio.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Enlazar las redes sociales</h5><p>Íconos visibles a Facebook, TikTok e Instagram en el encabezado, para que cada canal refuerce a los demás.</p></div></div>
+        <div class="plan-step"><div class="n">04</div><div><h5>Revisión responsive</h5><p>Confirmar que el sitio se vea bien en celular, donde llegará la mayoría de familias desde redes sociales.</p></div></div>
+      </div>
+
+      </div>
+
+      <div class="subtab-panel" id="web-tab-moderna">
+        <div class="subhead">
+          <span class="eyebrow">Mockup interactivo</span>
+          <h3>Vista previa de la web moderna</h3>
+        </div>
+        <p style="font-size:13.5px; color:#565B6E; margin-bottom:18px;">Usa las mismas fotos reales del sitio actual (nsfatima.org), cargadas en vivo desde su propio servidor. Puedes navegar el mockup como si fuera la web final.</p>
+        <div class="mockup-frame-wrap">
+          <iframe id="web-modern-frame" title="Propuesta de web moderna"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ CAPACITACIÓN DOCENTE ============ -->
+  <div class="view" id="view-docentes">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#6E4A18" data-icon="docentes"></div>
+        <div><span class="eyebrow">Base de todo el plan · "Fase de Planificación"</span><h2>Capacitación docente</h2></div>
+      </div>
+      <p class="subtitle">Ninguna red social, sitio web o certificación Google avanza si el equipo docente no está cómodo con las herramientas digitales del día a día.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Por qué es la base</h4>
+          <ul>
+            <li>Los docentes son quienes generan el contenido real de aula que alimenta a las redes sociales</li>
+            <li>Es requisito directo para avanzar en la ruta de Colegio de Referencia Google</li>
+            <li>Sin capacitación, el ChromeOS Flex instalado se usa muy por debajo de su potencial</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Niveles a considerar</h4>
+          <ul>
+            <li>Uso básico: Drive, Documentos, Meet</li>
+            <li>Uso pedagógico: Classroom y evaluación digital</li>
+            <li>Uso creativo: fotos y video corto para redes sociales del colegio</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Plan de formación progresivo</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Diagnóstico de nivel digital</h5><p>Encuesta corta al equipo docente para identificar quién ya usa Google Workspace y quién parte de cero.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Talleres por nivel</h5><p>Grupos separados por dominio actual, en vez de una sola capacitación general para todos.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Taller de contenido para redes</h5><p>Sesión específica de fotografía y video con celular, pensada para nutrir Facebook, TikTok e Instagram.</p></div></div>
+        <div class="plan-step"><div class="n">04</div><div><h5>Mentoría entre pares</h5><p>Docentes ya cómodos con la tecnología acompañan a sus colegas en el día a día del aula.</p></div></div>
+        <div class="plan-step"><div class="n">05</div><div><h5>Reconocimiento</h5><p>Visibilizar en el colegio a quienes completan certificaciones Google Educator, como incentivo institucional.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ ÁREAS ADMINISTRATIVAS ============ -->
+  <div class="view" id="view-admin">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#4C6B34" data-icon="admin"></div>
+        <div><span class="eyebrow">Gestión interna · "Fase de Planificación"</span><h2>Implementación digital en áreas administrativas</h2></div>
+      </div>
+      <p class="subtitle">Secretaría, tesorería y matrícula son la primera experiencia digital que tiene una familia con el colegio — antes incluso de pisar un aula.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Con qué ya se cuenta</h4>
+          <ul>
+            <li>Existe una plataforma virtual (nsfatima.sieweb.com.pe) para gestión académica</li>
+            <li>Datos de contacto institucional centralizados en un correo (informes@nsfatima.org)</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Fricciones típicas a revisar</h4>
+          <ul>
+            <li>Procesos de matrícula y pago que aún dependen de trámite presencial</li>
+            <li>Documentos y constancias gestionados fuera de un sistema centralizado</li>
+            <li>Comunicación con padres dispersa entre WhatsApp, llamadas y avisos en papel</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Dónde empezar a digitalizar</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Auditar la plataforma actual</h5><p>Revisar qué tan usada está la plataforma virtual existente y qué procesos aún quedan fuera de ella.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Matrícula y preinscripción en línea</h5><p>Formulario digital conectado a la futura sección de Admisión 2027 del sitio web.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Gestión documentaria en Drive compartido</h5><p>Carpetas ordenadas por área (secretaría, tesorería, dirección) con permisos definidos por rol.</p></div></div>
+        <div class="plan-step"><div class="n">04</div><div><h5>Canal oficial de comunicación con padres</h5><p>Unificar avisos en un solo canal digital, reduciendo la dependencia de papel y llamadas sueltas.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ YOUTUBE ============ -->
+  <div class="view" id="view-youtube">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#B31217" data-icon="youtube"></div>
+        <div><span class="eyebrow">Presencia digital · práctica común en otros colegios</span><h2>YouTube institucional</h2></div>
+      </div>
+      <p class="subtitle">El canal donde vive el contenido largo: tours virtuales, testimonios completos y transmisiones — todo lo que un Reel de 30 segundos no alcanza a contar.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="subhead">
+        <span class="eyebrow">Lo que encontramos</span>
+        <h3>Oportunidad de Reactivación de Contenido Audiovisual</h3>
+      </div>
+      <table class="diag-table">
+        <tr><th>Dato</th><th>Lo encontrado</th></tr>
+        <tr><td class="metric">Video localizado</td><td class="value">Un video embebido en el Google Sites del colegio: "50 años de vida institucional", celebrando el aniversario del <strong>2008</strong>.</td></tr>
+        <tr><td class="metric">Antigüedad</td><td class="value placeholder-val">El video tiene más de 15 años — sugiere que existe un canal, pero prácticamente sin actividad reciente.</td></tr>
+        <tr><td class="metric">Oportunidad</td><td class="value">YouTube es propiedad de Google: tener un canal activo también suma a la ruta de Colegio de Referencia Google.</td></tr>
+      </table>
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Por qué otros colegios lo usan</h4>
+          <ul>
+            <li>Formato ideal para tours virtuales del campus, cada vez más pedidos por familias que evalúan varios colegios</li>
+            <li>Los videos de YouTube posicionan mejor en buscadores que las publicaciones de redes sociales</li>
+            <li>Permite archivar actuaciones, ceremonias y charlas completas sin límite de duración</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Cómo se conecta con lo demás</h4>
+          <ul>
+            <li>Los mismos clips grabados para TikTok e Instagram se pueden recortar en sentido inverso hacia YouTube en formato largo</li>
+            <li>El video de admisión 2027 puede vivir aquí y enlazarse desde la web y WhatsApp</li>
+            <li>Sirve como respaldo permanente cuando un Reel o TikTok deja de mostrarse en el feed</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Cómo reactivarlo</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Recuperar el acceso al canal</h5><p>Ubicar quién administra la cuenta actual antes de crear una nueva, para no perder el video histórico de 2008.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Tour virtual del campus</h5><p>Un recorrido en video de 3 a 5 minutos por aulas, laboratorios y áreas comunes.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Serie "Voces Fatimeñas"</h5><p>Testimonios largos de egresadas, docentes y padres de familia — el formato que TikTok no permite.</p></div></div>
+        <div class="plan-step"><div class="n">04</div><div><h5>Transmisiones en vivo</h5><p>Izamiento de pabellón, actuaciones y ceremonias importantes, para familias que no pueden asistir presencialmente.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ GOOGLE BUSINESS PROFILE ============ -->
+  <div class="view" id="view-gbp">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#174EA6" data-icon="gbp"></div>
+        <div><span class="eyebrow">Búsqueda local · práctica común en otros colegios</span><h2>Perfil de Google (Maps y reseñas)</h2></div>
+      </div>
+      <p class="subtitle">Antes de abrir Facebook o Instagram, la mayoría de familias escribe "colegio en Belén, Iquitos" en Google. Lo que aparece ahí decide si siguen mirando o no.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Qué es y por qué importa</h4>
+          <ul>
+            <li>Es la ficha gratuita de Google que muestra dirección, horario, teléfono, fotos y reseñas directamente en la búsqueda y en Maps</li>
+            <li>Aparece antes que cualquier red social cuando alguien busca por ubicación</li>
+            <li>Las reseñas de padres de familia actuales pesan mucho en la decisión de una familia nueva</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Cómo lo usan otros colegios</h4>
+          <ul>
+            <li>Responden todas las reseñas, buenas y malas, con tono institucional</li>
+            <li>Publican fotos recientes de instalaciones y actividades directamente en el perfil</li>
+            <li>Agregan un enlace directo al formulario de admisión desde la ficha</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Plan para activar el perfil</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Reclamar o verificar la ficha</h5><p>Confirmar si ya existe un perfil de Google Business para el colegio y tomar el control administrativo.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Completar toda la información</h5><p>Horario, teléfono, dirección exacta, fotos actuales y enlace a la web y admisión 2027.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Campaña de reseñas</h5><p>Invitar a padres de familia satisfechos a dejar una reseña, especialmente durante la época de matrícula.</p></div></div>
+        <div class="plan-step"><div class="n">04</div><div><h5>Responder cada reseña</h5><p>Agradecer las positivas y responder con calma y datos concretos las críticas, sin dejar ninguna sin contestar.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ EMBAJADORES Y REFERIDOS ============ -->
+  <div class="view" id="view-embajadores">
+    <div class="view-head">
+      <button class="back-btn" onclick="showView('home')">← Volver al menú</button>
+      <div class="view-title-row">
+        <div class="view-icon" style="background:#8A4B78" data-icon="ambassadors"></div>
+        <div><span class="eyebrow">Captación · práctica común en otros colegios</span><h2>Embajadores y referidos</h2></div>
+      </div>
+      <p class="subtitle">Las familias confían más en otra familia que en cualquier publicación. El colegio ya tiene a sus mejores promotores dentro de sus aulas.</p>
+    </div>
+
+    <div class="view-body">
+
+      <div class="two-col">
+        <div class="info-card">
+          <h4>Por qué funciona en otros colegios</h4>
+          <ul>
+            <li>El "boca a boca digital" — padres compartiendo publicaciones del colegio — convierte mejor que cualquier anuncio pagado</li>
+            <li>Alumnas y egresadas activas en redes son embajadoras naturales si se les da contenido fácil de compartir</li>
+            <li>Un incentivo simple (descuento, reconocimiento) multiplica el alcance del boca a boca</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Quiénes pueden ser embajadores</h4>
+          <ul>
+            <li>Padres de familia actuales, compartiendo su experiencia real</li>
+            <li>Egresadas destacadas, como referentes de a dónde puede llegar una fatimeña</li>
+            <li>Docentes, mostrando el lado humano detrás de la enseñanza</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">
+        <span class="eyebrow">Propuestas de mejora</span>
+        <h3>Plan de embajadores para admisión 2027</h3>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step"><div class="n">01</div><div><h5>Kit de contenido compartible</h5><p>Imágenes y videos cortos listos para que padres y alumnas reposteen en sus propias redes.</p></div></div>
+        <div class="plan-step"><div class="n">02</div><div><h5>Programa "Trae una familia"</h5><p>Reconocimiento simple para quien refiera a una familia que termine matriculándose.</p></div></div>
+        <div class="plan-step"><div class="n">03</div><div><h5>Testimonios de egresadas</h5><p>Historias breves en video de exalumnas, conectadas con la serie "Voces Fatimeñas" de YouTube.</p></div></div>
+        <div class="plan-step"><div class="n">04</div><div><h5>Grupo de embajadores docentes</h5><p>Un pequeño equipo de profesores capacitados en el taller de contenido para redes, generando material desde el aula.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>Colegio Nuestra Señora de Fátima — Propuesta de Transformación Digital · Admisión 2027</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
